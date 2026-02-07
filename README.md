@@ -21,3 +21,21 @@ A professional, secure, and automated car rental platform built with Node.js, Ty
 3. Set up `.env` (include DB credentials, PORT, and JWT_SECRET)
 4. Start the server: `npm run dev`
 
+## Repo & Live url
+
+1. GitHub Repo: `https://github.com/monir-hossaien/vechile_rental_backend.git`
+2. Live Deployment: `https://vechile-rental-backend.vercel.app`
+
+
+## Credentials for Testing:
+
+1. Admin: `
+email: admin@example.com,
+password: securePassword123
+`
+
+2. Customer: `
+email: user@example.com,
+password: securePassword123
+`
+
