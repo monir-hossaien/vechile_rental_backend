@@ -53,7 +53,7 @@ app.use('/api/v1', vehicleRoutes);
 app.get('/', (req: Request, res: Response) => {
   res.status(200).json({
     status: true,
-    message: "Welcome to the HireMe - Job Posting Platform API!"
+    message: "Welcome to our rental service API! Explore our endpoints to manage users, vehicles, and bookings. Happy renting!"
   });
 });
 
