@@ -7,7 +7,7 @@ import 'dotenv/config';
 import cookieParser from 'cookie-parser';
 
 import { rateLimit } from 'express-rate-limit';
-import {connectDB} from "./config/db";
+
 
 
 // routes
@@ -42,10 +42,6 @@ app.use(cors(corsOptions));
 
 // 3. Prevent HTTP Parameter Pollution
 app.use(limiter);
-
-
-// initiate database
-connectDB();
 
 // Routes
 app.use('/api/v1', authRoutes);

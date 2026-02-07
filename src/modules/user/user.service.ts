@@ -1,13 +1,9 @@
 import { pool } from "../../config/db";
 import { Request} from "express";
-import { UserRole } from "./user.interface";
+import { User, UserRole } from "./user.interface";
 
 export interface AuthRequest extends Request {
-    user?: {
-        id: number;
-        role: UserRole;
-        email: string;
-    }
+    user?: User;
 }
 
 
@@ -59,6 +55,7 @@ export const updateUser = async (req: AuthRequest) => {
 
         const isAdmin = req?.user?.role === UserRole.ADMIN ;
         const isOwnProfile = req?.user?.id === Number(userId);
+    
 
         if(!isAdmin && !isOwnProfile){
             return {

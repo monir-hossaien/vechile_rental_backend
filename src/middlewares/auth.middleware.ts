@@ -1,14 +1,10 @@
 import { Request, Response, NextFunction } from "express";
 import { verifyToken } from "../helpers/jwt";
 import { JwtPayload } from "jsonwebtoken";
-import { UserRole } from "../modules/user/user.interface";
+import { User} from "../modules/user/user.interface";
 
 export interface AuthRequest extends Request {
-    user?: {
-        id: number;
-        role: UserRole;
-        email: string;
-    }
+    user?: User
 }
 
 export const authenticateUser = (...roles: string[]) => {

@@ -1,6 +1,7 @@
-import { Pool } from "pg";
+import { Pool, types } from "pg";
 import { CONFIG } from "./index";
-import { log } from "node:console";
+
+types.setTypeParser(1082, (val) => val);
 
 export const pool = new Pool({
   connectionString: CONFIG.CONNECTION_STRING,
